@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    border: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background: khaki;
+    display: grid;
+    grid-template-rows: 5vh 80vh 10vh 5vh;
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-areas: ". . . "
+                        ". main ."
+                        " . buttons ."
+                        ". . . ";
+                        
+ }
+ .main{
+     grid-area: main;
+
+     display: grid;
+    grid-template-rows: 90vh;
+    grid-template-columns: 40fr 10fr 10fr 40fr;
+    grid-template-areas: ". next Previous .";    
+    transition: all 500ms ease-in-out;
+    background-size: cover; 
+    background-position-y: center; 
+    background-position-x: center;  
+}
+.buttons{
+    grid-area: buttons;
+    background: lightslategrey;
+}
+.next{
+    grid-area: next;
+    background: lightblue;
+    border-radius: 30%; 
+    height: 60%;
+    width: 10%;
+    border: 2px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 2rem; 
+    
+}
+.Previous{
+    background: lightblue;
+    border-radius: 30%;
+    height: 60%;
+    width: 10%;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media only screen and (max-width: 1030px)
+{
+.Previous{
+    height: 60%;
+    width: 20%;
+    font-size: 3rem;
+
+}
+.next{
+    height: 60%;
+    font-size: 3rem;
+
+    width: 20%;
+}
+}
+@media only screen and (max-width: 780px)
+{
+.Previous{
+    height: 60%;
+    width: 20%;
+    font-size: 3rem;
+
+}
+.main{
+    background-size: cover;    
+}
+.next{
+    height: 60%;
+    font-size: 3rem;
+
+    width: 20%;
+}
+}
+@media only screen and (max-width: 500px)
+{
+  html{
+      font-size: 35%;
+  }  
+.Previous{
+    height: 60%;
+    width: 40%;
+    font-size: 4rem;
+
+}
+.next{
+    height: 60%;
+    font-size: 4rem;
+
+    width: 40%;
+}
+.main{
+    background-size: cover;    
+}
+
+}
